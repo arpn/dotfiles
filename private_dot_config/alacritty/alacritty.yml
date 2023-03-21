@@ -1,0 +1,17 @@
+# Autostart fish
+shell:
+  program: /usr/bin/fish
+
+# Set fonts
+font:
+  normal:
+    family: Fira Code Nerd Font
+    style: Regular
+  size: 10
+
+# Color scheme
+import:
+  - ~/.config/alacritty/themes/rose-pine/rose-pine-moon.yml
+  #  - ~/.config/alacritty/themes/catppuccin/catppuccin-frappe.yml
+  #  - ~/.config/alacritty/themes/dracula.yaml
+

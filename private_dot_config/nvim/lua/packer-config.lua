@@ -18,6 +18,7 @@ require('packer').startup(function()
     -- themes
     use 'savq/melange'
     use 'folke/tokyonight.nvim'
+    use 'rose-pine/neovim'
     -- statusline
     use 'nvim-lualine/lualine.nvim'
     -- statuslien icons
@@ -80,3 +81,5 @@ require('mason').setup {}
 require('mason-lspconfig').setup {}
 -- which-key
 require('which-key-config')
+-- rose-pine theme
+require('rose-pine').setup { dark_variant = 'moon' }

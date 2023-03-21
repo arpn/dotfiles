@@ -14,7 +14,7 @@ alias v nvim
 alias r ranger
 alias ls exa
 alias la "exa -al"
-alias cat batcat
+alias cat bat
 alias top btop
 alias lab jupyter-lab
 alias ds "conda activate ds"

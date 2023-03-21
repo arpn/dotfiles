@@ -6,7 +6,7 @@ vim.g.localleader = ' '
 require('packer-config')
 
 -- set colorscheme
-vim.g.colors_name = 'tokyonight'
+vim.g.colors_name = 'rose-pine'
 
 vim.bo.shiftwidth = 4                                -- nof spaces for each indent level
 vim.bo.tabstop = 4                                   -- nof spaces a tab corresponds to
