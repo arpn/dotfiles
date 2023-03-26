@@ -17,8 +17,17 @@ alias la "exa -al"
 alias cat bat
 alias top btop
 alias lab jupyter-lab
-alias ds "conda activate ds"
-alias base "eval /home/arttu/.miniconda3/bin/conda shell.fish hook $argv | source"
 
 # Starship shell
 starship init fish | source
+
+# Hook for direnv
+direnv hook fish | source
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+if test -f /home/arttu/.miniconda3/bin/conda
+    eval /home/arttu/.miniconda3/bin/conda "shell.fish" "hook" $argv | source
+end
+# <<< conda initialize <<<
+
