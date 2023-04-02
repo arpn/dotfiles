@@ -1,0 +1,9 @@
+format = '$all${custom.container}$shell$character'
+
+[container]
+disabled = true
+
+[custom.container]
+command = 'echo ⬢ $CONTAINER_ID'
+when = '[ -n "$CONTAINER_ID" ]'
+disabled = false
