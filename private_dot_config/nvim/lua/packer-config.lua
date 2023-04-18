@@ -56,7 +56,7 @@ end)
 
 -- configure plugins
 -- statusline
-require('lualine').setup {}
+require('lualine-config')
 -- bufferline
 require('bufferline').setup {}
 -- icons
