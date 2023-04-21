@@ -28,6 +28,9 @@ if status is-interactive
     # Atuin shell history
     atuin init fish --disable-up-arrow | source
 
+    # Zoxide init
+    zoxide init fish | source
+
     # >>> conda initialize >>>
     # !! Contents within this block are managed by 'conda init' !!
     if test -f /home/arttu/.miniconda3/bin/conda
