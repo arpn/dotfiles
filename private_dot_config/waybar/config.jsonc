@@ -1,0 +1,107 @@
+{
+    "layer": "top",
+    "position": "left", 
+    "height": 200,
+    "margin-left": 10,
+    "modules-center": ["wlr/workspaces", "network", "custom/vpn", "mpris", "bluetooth", "pulseaudio", "pulseaudio#percentage", "battery","battery#percentage", "custom/calendar-icon", "clock", "clock#date", "custom/time-icon", "clock#time"],
+    // Modules configuration
+    "wlr/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "sort-by-name": true,
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "󰻞",
+            "5": "",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "9"
+        }
+    },
+    "network": {
+        "format-wifi": "",
+        "format-ethernet": "",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "󰤫",
+        "tooltip-format-wifi": "{essid}",
+        "tooltip-format-ethernet": "{ifname} ({ipaddr})",
+        "tooltip-format-disconnected": "Disconnected"
+    },
+    "custom/vpn": {
+        "exec": "~/bin/waybar-vpn-status.sh",
+        "exec-if": "ip link show nordlynx || ip link show tun0 || ip link show wg0",
+        "return-type": "json"
+    },
+    "mpris": {
+        "format": "{status_icon}",
+        "format-paused": "{status_icon}",
+        "status-icons": {
+            "playing": "󱖏",
+            "paused": "󱖒",
+            "stopped": ""
+        }
+    },
+    "bluetooth": {
+        "format": "󰂯",
+        "format-connected": "󰂱",
+        "format-off": "󰂲",
+        "format-disabled": "󰂲",
+        "tooltip-format": "{status} ({num_connections})",
+        "on-click": "rofi-bluetooth"
+    },
+    "pulseaudio": {
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "format": "{icon}",
+        "format-muted": "",
+        "format-icons": {
+            "headphone": "󰋋",
+            "hands-free": "󰋎",
+            "headset": "󰋎",
+            "phone": "",
+            "default": ["", ""]
+        }
+    },
+    "pulseaudio#percentage": {
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "format": "{volume}"
+    },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}",
+        "format-warning": "<span foreground='#98bb6c'>{icon}</span>",
+        "format-critical": "<span foreground='#e46876'>{icon}</span>",
+        "format-charging": "<span foreground='#98bb6c'></span>",
+        "format-plugged": "<span foreground='#98bb6c'></span>",
+        "format-full": "<span foreground='#98bb6c'></span>",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "battery#percentage": {
+        "format": "{capacity}",
+        "tooltip-format": "{time}"
+    },
+    "custom/calendar-icon": {
+        "format": "",
+        "tooltip": false
+    },
+    "clock": {
+        "format": "{:%a}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    "clock#date": {
+        "format": "{:%d}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    "custom/time-icon": {
+        "format": "",
+        "tooltip": false
+    },
+    "clock#time": {
+        "format": "{:%H\n%M}"
+    }
+}
