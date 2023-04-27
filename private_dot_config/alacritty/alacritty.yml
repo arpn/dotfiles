@@ -7,7 +7,7 @@ font:
   normal:
     family: Fira Code Nerd Font
     style: Regular
-  size: 10
+  size: 12
 
 # Color scheme
 import:
