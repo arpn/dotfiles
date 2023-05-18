@@ -32,7 +32,7 @@
     },
     "custom/vpn": {
         "exec": "~/bin/waybar-vpn-status.sh",
-        "exec-if": "ip link show nordlynx || ip link show tun0 || ip link show wg0",
+        "exec-if": "ip link | rg -q 'nordlynx|tun0|wg0'",
         "interval": 1,
         "return-type": "json"
     },
