@@ -1,5 +1,5 @@
 * {
-  font-family:'Monospace';
+  font-family:'Symbols Nerd Font';
   padding-left: 3px;
   padding-right: 3px;
 }
@@ -24,7 +24,7 @@ tooltip label {
 
 #workspaces {
   background: #16161d;
-  font-size: 24pt;
+  font-size: 16pt;
   padding-top: 20px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
@@ -63,7 +63,7 @@ tooltip label {
 #network {
   padding-top: 20px;
   padding-bottom: 10px;
-  font-size: 24pt;
+  font-size: 16pt;
   color: #7aa89f;
 }
 
@@ -71,7 +71,7 @@ tooltip label {
   padding-top: 10px;
   padding-bottom: 10px;
   color: #d27e99;
-  font-size: 30pt;
+  font-size: 20pt;
   border-radius: 0px;
 }
 
@@ -79,14 +79,14 @@ tooltip label {
   padding-top: 10px;
   padding-bottom: 10px;
   color: #7e9cd8;
-  font-size: 30pt;
+  font-size: 20pt;
   border-radius: 0px;
 }
 
 #pulseaudio {
   padding-top: 10px;
   color: #c0a36e;
-  font-size: 24pt;
+  font-size: 16pt;
 }
 
 #pulseaudio.percentage {
@@ -98,7 +98,7 @@ tooltip label {
 
 #battery {
   padding-top: 10px;
-  font-size: 18pt;
+  font-size: 14pt;
   color: #98bb6c;
 }
 
@@ -113,12 +113,12 @@ tooltip label {
   padding-top: 10px;
   padding-bottom: 10px;
   color: #9cabca;
-  font-size: 30pt;
+  font-size: 20pt;
 }
 
 #custom-calendar-icon {
   padding-top: 10px;
-  font-size: 24pt;
+  font-size: 16pt;
   color: #957fb8;
 }
 
@@ -137,7 +137,7 @@ tooltip label {
 
 #custom-time-icon {
   padding-top: 10px;
-  font-size: 24pt;
+  font-size: 16pt;
   color: #7fb4ca;
 }
 
