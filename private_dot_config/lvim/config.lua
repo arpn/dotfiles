@@ -11,6 +11,14 @@ lvim.plugins = {
   { "savq/melange-nvim" },
   { "rose-pine/neovim" },
   { "catppuccin/nvim" },
+  {
+    "kylechui/nvim-surround",
+    version = "*",
+    event = "VeryLazy",
+    config = function()
+      require("nvim-surround").setup()
+    end
+  },
 }
 
 -- colorscheme
@@ -22,27 +30,25 @@ vim.wo.colorcolumn = "88"  -- mark 88 char column
 vim.o.timeoutlen = 500     -- timeout for which-key popup
 
 -- keymaps
-lvim.keys.normal_mode["H"] = "0"
-lvim.keys.normal_mode["J"] = "G"
 lvim.lsp.buffer_mappings.normal_mode["K"] = nil  -- lsp mapping takes precedence, so it has to be first removed
-lvim.keys.normal_mode["K"] = "gg"
-lvim.keys.normal_mode["L"] = "$"
-lvim.keys.visual_mode["H"] = "0"
-lvim.keys.visual_mode["J"] = "G"
-lvim.keys.visual_mode["K"] = "gg"
-lvim.keys.visual_mode["L"] = "$"
 lvim.keys.normal_mode["<tab>"] = ":bnext<cr>"
 lvim.keys.normal_mode["<s-tab>"] = ":bprevious<cr>"
+vim.keymap.set({'n', 'v', 'o'}, 'H', '0')
+vim.keymap.set({'n', 'v', 'o'}, 'J', 'G')
+vim.keymap.set({'n', 'v', 'o'}, 'K', 'gg')
+vim.keymap.set({'n', 'v', 'o'}, 'L', '$')
+lvim.keys.normal_mode["<leader>i"] = "oimport inspect, IPython; print(\"\\n\", inspect.currentframe().f_code.co_name.upper())<cr>IPython.embed()<esc>"
 
 -- lsp config
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   { name = "black" },
+  { name = "isort" },
 }
 
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
-  { 
+  {
     name = "flake8",
     args = { "--max-line-length=88" },
   },
