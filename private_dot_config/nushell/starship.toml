@@ -1,0 +1,9 @@
+format = '$all${custom.container}$shell$character'
+
+[container]
+disabled = true
+
+[custom.container]
+command = '"⬢ " + $env.CONTAINER_ID'
+when = '"CONTAINER_ID" in $env'
+disabled = false

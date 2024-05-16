@@ -1,19 +1,21 @@
 # Blank greeting
 set fish_greeting ""
 
-# Set editor to nvim
-set -gx EDITOR nvim
+# Set editor to lvim
+set -gx EDITOR lvim
 
-# Add local bin dirs to PATH
-set -U fish_user_paths /home/arttu/bin $fish_user_paths
-set -U fish_user_paths /home/arttu/.local/bin $fish_user_paths
+# Set preferred shell to fish
+set -gx SHELL fish
+
+# Point out system locales for nix packages
+set -gx LOCALE_ARCHIVE /usr/lib/locale/locale-archive
 
 if status is-interactive
     # Aliases
-    alias vim nvim
-    alias v nvim
+    alias vim lvim
+    alias v lvim
     alias r ranger
-    alias ls exa
+    # alias ls exa
     alias la "exa -al"
     alias cat bat
     alias top btop
@@ -30,11 +32,4 @@ if status is-interactive
 
     # Zoxide init
     zoxide init fish | source
-
-    # >>> conda initialize >>>
-    # !! Contents within this block are managed by 'conda init' !!
-    if test -f /home/arttu/.miniconda3/bin/conda
-        eval /home/arttu/.miniconda3/bin/conda "shell.fish" "hook" $argv | source
-    end
-    # <<< conda initialize <<<
 end

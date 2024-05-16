@@ -2,10 +2,26 @@
     "layer": "top",
     "position": "left", 
     "height": 200,
-    "margin-left": 10,
-    "modules-center": ["wlr/workspaces", "network", "custom/vpn", "mpris", "bluetooth", "pulseaudio", "pulseaudio#percentage", "battery","battery#percentage", "custom/calendar-icon", "clock", "clock#date", "custom/time-icon", "clock#time"],
+    "margin-left": 0,
+    "modules-center": ["sway/workspaces", "hyprland/workspaces", "network", "custom/vpn", "mpris", "bluetooth", "pulseaudio", "pulseaudio#percentage", "battery","battery#percentage", "custom/calendar-icon", "clock", "clock#date", "custom/time-icon", "clock#time"],
     // Modules configuration
-    "wlr/workspaces": {
+    "sway/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "sort-by-name": true,
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "󰻞",
+            "5": "",
+            "6": "󰝚",
+            "7": "",
+            "8": "󰦗",
+            "9": "󰠓"
+        }
+    },
+    "hyprland/workspaces": {
         "format": "{icon}",
         "on-click": "activate",
         "sort-by-name": true,
@@ -62,7 +78,7 @@
             "hands-free": "󰋎",
             "headset": "󰋎",
             "phone": "",
-            "default": ["", ""]
+            "default": [""]
         }
     },
     "pulseaudio#percentage": {
@@ -79,7 +95,7 @@
         "format-critical": "<span foreground='#e46876'>{icon}</span>",
         "format-charging": "<span foreground='#98bb6c'></span>",
         "format-plugged": "<span foreground='#98bb6c'></span>",
-        "format-full": "<span foreground='#98bb6c'></span>",
+        "format-full": "<span foreground='#98bb6c'></span>",
         "format-icons": ["", "", "", "", ""]
     },
     "battery#percentage": {

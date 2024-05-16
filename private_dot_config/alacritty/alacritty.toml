@@ -1,5 +1,5 @@
 # Color scheme
-import = ["/home/arttu/.config/alacritty/themes/rose-pine/rose-pine-moon.toml"]
+import = ["~/.config/alacritty/rose-pine-moon.toml"]
 
 # Set font size
 [font]
@@ -10,6 +10,6 @@ size = 12
 family = "Fira Code Nerd Font"
 style = "Regular"
 
-# Autostart fish
+# Autostart shell
 [shell]
-program = "/usr/bin/fish"
+program = "nu"
