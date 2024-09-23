@@ -19,6 +19,7 @@ $env.config = {
 alias vim = lvim
 alias v = lvim
 alias r = ranger
+alias la = ls -al
 
 source ~/.config/nushell/zoxide.nu
 source ~/.config/nushell/starship.nu
